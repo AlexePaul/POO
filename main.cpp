@@ -33,6 +33,7 @@ void fluxTestare2(){
 }
 
 int main(){
+
 	fluxTestare1();
 	fluxTestare2();
 	return 0;
