@@ -7,8 +7,6 @@
 using namespace std;
 
 class student{
-	int anulNasterii,numarCredite;
-	string nume;
 public:
 	student();
 	student(string nume, int anulNasterii, int numarCredite);
@@ -19,7 +17,6 @@ public:
 	int getAnulNasterii();
 	int getNumarCredite();
 	string getNume();
-
 	student operator +(student b);
 	student operator -(student b);
 	void operator +=(student b);
@@ -29,6 +26,9 @@ public:
 
 	friend ostream& operator << (ostream&, student&);
 	friend istream& operator >> (istream&, student&);
+private:
+	int anulNasterii,numarCredite;
+	string nume;
 };
 
 #endif
