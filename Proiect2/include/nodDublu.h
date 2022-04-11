@@ -4,7 +4,12 @@
 #include "nod.h"
 
 template <typename type>
-class nodDublu : nod<type>{
+class nodDublu : public nod<type>{
+public:
+	nodDublu(type);
+	void setPrev(nod<type>*);
+	nod<type>* getPrev();	
+private:
 	nod<type>* prev;
 };
 
