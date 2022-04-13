@@ -16,8 +16,9 @@ template <typename type>
 class doubleLL{
 	public:
 		doubleLL();
+		doubleLL(const doubleLL&);
 		void push_back(type);
-		type operator[](unsigned int);
+		nod<type>& operator[](unsigned int);
 		int getSize(){
 			return this->size;
 		}

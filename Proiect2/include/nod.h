@@ -1,17 +1,32 @@
 #ifndef nod_H
 #define nod_H
 
+#include <iostream>
+
+using namespace std;
+
+template<class T>
+class nod;
+
+template<typename type>
+ostream& operator <<(ostream& o, nod<type>& list);
+
 template <typename type>
 class nod{
 public:
 	nod(type);
+	nod();
+	nod(const nod<type>&);
+	virtual void operator = (nod<type>);
 	virtual void setNext(nod*);
-	nod<type>* getNext(){
+	virtual nod<type>* getNext(){
 		return next;
 	}
-	type getValue(){	
+	virtual type getValue(){	
 		return value;
 	}
+	~nod();
+	friend ostream& operator << <>(ostream&, nod<type>&);
 private:
 	type value;
 	nod<type>* next;

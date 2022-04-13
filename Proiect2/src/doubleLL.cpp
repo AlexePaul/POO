@@ -39,13 +39,13 @@ void doubleLL<type>::pop_back(){
 }
 
 template<typename type>
-type doubleLL<type>::operator [](unsigned index){
+nod<type>& doubleLL<type>::operator [](unsigned index){
 	if(index >= this->size)
-		return -1;
+		throw "Index Overflow";
 	nod<type>* x = this->front;
 	for(int i = 0; i < index; i++)
 		x = x->getNext();
-	return x->getValue();
+	return *x;
 }
 
 template<typename type>

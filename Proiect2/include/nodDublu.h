@@ -6,9 +6,12 @@
 template <typename type>
 class nodDublu : public nod<type>{
 public:
+	nodDublu();
 	nodDublu(type);
+	nodDublu(const nodDublu<type>&);
 	void setPrev(nod<type>*);
-	nod<type>* getPrev();	
+	nod<type>* getPrev();
+	~nodDublu();	
 private:
 	nod<type>* prev;
 };
