@@ -7,6 +7,9 @@
 using namespace std;
 
 template<typename type>
+int doubleLL<type>::x;
+
+template<typename type>
 doubleLL<type>::doubleLL(){
 	this->size = 0;
 	this->front = NULL;
@@ -34,7 +37,7 @@ template<typename type>
 void doubleLL<type>::pop_back(){
 	nod<type>* x = this->back->getPrev();
 	delete this->back;
-	this->back = dynamic_cast< nodDublu<type>* >(x);
+	this->back = dynamic_cast< nodDublu<type>* >(x); // downcast
 	this->size--;
 }
 
@@ -49,12 +52,26 @@ nod<type>& doubleLL<type>::operator [](unsigned index){
 }
 
 template<typename type>
-ostream& operator <<(ostream& o, doubleLL<type>& list){
-	nod<type>* x = list.front;
+ostream& operator <<(ostream& o, doubleLL<type>& list){ // afisarea a n obiecte
+	nod<type>* x = list.front; //upcast
 	for(int i = 0; i < list.getSize(); i++){
-		o << x->getValue() << ' ';
+		o << *x << ' ';
 		x = x->getNext();
 	}
 	o << '\n';
 	return o;
+}
+
+template<typename type>
+istream& operator >>(istream& in, doubleLL<type>& list){ // citirea completa a n obiecte
+	int s;
+	type x;
+	cout << "Numarul de numere citite: ";
+	in >> s;
+	for(int i = 0; i < s; i++){
+		cout << "al " << i+1 << "-lea element este: ";
+		in >> x;
+		list.push_back(x);	
+	}
+	return in;
 }

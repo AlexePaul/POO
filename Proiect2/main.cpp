@@ -15,6 +15,7 @@ void clear(){ // preluata de la oameni cu mai mult de 2 neuroni (care in cazul m
 }
 
 int main(){
+doubleLL<int>::setX(5);
 doubleLL<int>t;
 long long n,x;
 clear();
@@ -23,8 +24,9 @@ clear();
 		cout << "2. Scoate Un element de la sfarsitul listei\n";
 		cout << "3. Afiseaza lista\n";
 		cout << "4. Afiseaza elementul de pe pozitia data\n";
-		cout << "5. Goleste Consola\n";
-		cout << "6. Opreste Programul\n";
+		cout << "5. Citeste o lista\n";
+		cout << "6. Goleste Consola\n";
+		cout << "7. Opreste Programul\n";
 		cin >> x;
 		switch (x){
 			case 1:
@@ -51,9 +53,12 @@ clear();
 				}
 				break;
 			case 5:
-				clear();
+				cin >> t;
 				break;
 			case 6:
+				clear();
+				break;
+			case 7:
 				return 0;
 				break;
 			default:

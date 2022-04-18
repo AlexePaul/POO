@@ -11,6 +11,9 @@ class nod;
 template<typename type>
 ostream& operator <<(ostream& o, nod<type>& list);
 
+template<typename type>
+istream& operator >>(istream& in, nod<type>& list);
+
 template <typename type>
 class nod{
 public:
@@ -27,6 +30,7 @@ public:
 	}
 	~nod();
 	friend ostream& operator << <>(ostream&, nod<type>&);
+	friend istream& operator >> <>(istream&, nod<type>&);
 private:
 	type value;
 	nod<type>* next;

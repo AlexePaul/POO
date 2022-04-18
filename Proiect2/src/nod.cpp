@@ -42,3 +42,8 @@ ostream& operator << (ostream& o, nod<type>& nodToPrint){
 	return o;
 }
 
+template<typename type>
+istream& operator >> (istream& in, nod<type>& nodToRead){
+	in >> nodToRead.value;
+	return in;
+}
