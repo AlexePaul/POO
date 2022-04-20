@@ -17,6 +17,12 @@ doubleLL<type>::doubleLL(){
 }
 
 template<typename type>
+doubleLL<type>::doubleLL(const doubleLL& list){
+	this->size = list.size;
+	this->front = list.front;
+	this->back = list.back;
+}
+template<typename type>
 void doubleLL<type>::push_back(type element){
 	if(this->front == NULL){
 		nodDublu<type>* x = new nodDublu<type>(element);	
@@ -74,4 +80,11 @@ istream& operator >>(istream& in, doubleLL<type>& list){ // citirea completa a n
 		list.push_back(x);	
 	}
 	return in;
+}
+
+template<typename type>
+void doubleLL<type>::operator = (doubleLL<type> list){
+	this->front = list.front;
+	this->back = list.back;
+	this->size = list.size;
 }

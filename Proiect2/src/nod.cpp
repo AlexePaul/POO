@@ -27,11 +27,6 @@ nod<type>::nod(const nod<type>& nodToCopy){
 }
 
 template<typename type>
-void nod<type>::operator = (nod<type> nodToCopy){
-	this->value = nodToCopy.value;
-}
-
-template<typename type>
 nod<type>::~nod(){
 	// nu am ce sa fac aici :)
 }
@@ -46,4 +41,10 @@ template<typename type>
 istream& operator >> (istream& in, nod<type>& nodToRead){
 	in >> nodToRead.value;
 	return in;
+}
+
+template<typename type>
+void nod<type>::operator = (nod<type> node){
+	this->value = node.value;
+	this->next = node.next;
 }

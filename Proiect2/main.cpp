@@ -17,7 +17,15 @@ void clear(){ // preluata de la oameni cu mai mult de 2 neuroni (care in cazul m
 int main(){
 doubleLL<int>::setX(5);
 doubleLL<int>t;
+doubleLL<int>p;
 long long n,x;
+
+cin >> t;
+p = t;
+cout << p;
+cin >> x;
+// am vrut sa arat ca merge insa nu stiu unde/ cu ce scop sa il introduc in meniu
+
 clear();
 	while(true){
 		cout << "1. Adauga un element la sfarsitul listei\n";

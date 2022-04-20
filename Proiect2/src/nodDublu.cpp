@@ -30,7 +30,11 @@ nodDublu<type>::nodDublu(const nodDublu<type>& nodToCopy):nod<type>(nodToCopy){
 
 template<typename type>
 nodDublu<type>::~nodDublu(){
-	if(this->getNext() != NULL){
-		this->prev->setNext(this->getNext());
-	}
+	// nu am ce sa fac in destructor
+}
+
+template<typename type>
+void nodDublu<type>::operator = (nodDublu<type> node){
+	this->prev = node.prev;
+	static_cast<nod<type>*> (this) = static_cast<nod<type>> (node);
 }

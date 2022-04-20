@@ -12,6 +12,7 @@ public:
 	void setPrev(nod<type>*);
 	nod<type>* getPrev();
 	~nodDublu();	
+	void operator = (nodDublu<type>);
 private:
 	nod<type>* prev;
 };

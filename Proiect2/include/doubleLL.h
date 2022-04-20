@@ -28,6 +28,7 @@ class doubleLL{
 		int getSize(){
 			return this->size;
 		}
+		void operator = (doubleLL<type>);
 		void pop_back();
 		friend ostream& operator << <>(ostream&, doubleLL<type>&);
 		friend istream& operator >> <>(istream&, doubleLL<type>&);

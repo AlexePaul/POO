@@ -20,7 +20,7 @@ public:
 	nod(type);
 	nod();
 	nod(const nod<type>&);
-	virtual void operator = (nod<type>);
+	void operator = (nod<type>);
 	virtual void setNext(nod*);
 	virtual nod<type>* getNext(){
 		return next;
