@@ -22,6 +22,18 @@ doubleLL<type>::doubleLL(const doubleLL& list){
 	this->front = list.front;
 	this->back = list.back;
 }
+
+template<typename type>
+doubleLL<type>::~doubleLL(){
+	nod<type>* x = this->front;
+	nod<type>* x2 = this->front->getNext();
+	for(int i = 0; i < this->size-1; i++){
+		delete x;
+		x = x2;
+		x2 = x2->getNext();
+	}
+}
+
 template<typename type>
 void doubleLL<type>::push_back(type element){
 	if(this->front == NULL){

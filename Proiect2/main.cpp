@@ -54,7 +54,7 @@ clear();
 				cout << "Pozitia elementului pe care il doresti afisat: ";
 				cin >> n;
 				try{
-					cout << '\n' << t[n];
+					cout << '\n' << t[n] << '\n';
 				}
 				catch(const char* s){
 					cout << s << '\n';

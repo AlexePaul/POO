@@ -23,6 +23,7 @@ class doubleLL{
 		}
 		doubleLL();
 		doubleLL(const doubleLL&);
+		~doubleLL();
 		void push_back(type);
 		nod<type>& operator[](unsigned int);
 		int getSize(){
