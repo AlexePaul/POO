@@ -23,7 +23,7 @@ long long n,x;
 cin >> t;
 p = t;
 cout << p;
-cin >> x;
+cin >> x; //asta este aici ca sa nu treaca direct la meniu
 // am vrut sa arat ca merge insa nu stiu unde/ cu ce scop sa il introduc in meniu
 
 clear();
