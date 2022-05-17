@@ -9,9 +9,14 @@
 template<typename type>
 class menu{
 public:
-	static void runMenu();
+	void runMenu();
+	static menu<type>* getInstance();
 private: 
-	menu();
+	void clear();
+	static menu<type>* instance;
+	menu(){
+
+	}
 };
 
 #endif

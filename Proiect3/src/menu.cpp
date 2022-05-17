@@ -4,7 +4,11 @@
 #include "repoList.cpp"
 #include "../include/nod.h"
 
-void clear(){ // preluata de la oameni cu mai mult de 2 neuroni (care in cazul meu sunt in vacanta in grecia) (Stack Overflow)
+template<typename type>
+menu<type>* menu<type>::instance = nullptr;
+
+template<typename type>
+void menu<type>::clear(){ // preluata de la oameni cu mai mult de 2 neuroni (care in cazul meu sunt in vacanta in grecia) (Stack Overflow)
 #if defined _WIN32
     system("cls");
 #elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
@@ -12,6 +16,13 @@ void clear(){ // preluata de la oameni cu mai mult de 2 neuroni (care in cazul m
 #elif defined (__APPLE__)
     system("clear");
 #endif
+}
+
+template<typename type>
+menu<type>* menu<type>::getInstance(){
+		if(instance == nullptr)
+			instance = new menu<type>();
+		return instance;
 }
 
 template<typename type>
@@ -86,7 +97,7 @@ void menu<type>::runMenu(){
 				clear();
 				break;
 			case 7:
-				cout << "dimensiunea va fii: \n";
+				cout << "dimensiunea va fi: \n";
 				cin >> nr; 
 				rL.resize(nr);
 				break;
