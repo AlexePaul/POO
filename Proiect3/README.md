@@ -2,6 +2,8 @@
 
 - The class doubleLL is a template implemented [double linked list](https://www.geeksforgeeks.org/doubly-linked-list/) 
 To implement this class i also created the nod class that is used to store a node in the list and the "nodDublu" that is used for a double node (used inheritance from the simple node) and it also stores a pointer to the previous element.
+- The difference between this project and the 2nd project is that in this one, i have used design patterns such as: **singleton** and **repository**.
+- In this iteration of the project you are able to have more lists and of multiple data types.
 - The doubleLL class has the following functions implemented:
 > 1. operators << and >> 
 >> These are used for input and output of the list
@@ -43,4 +45,3 @@ To implement this class i also created the nod class that is used to store a nod
 >>    cin >> t; // we'll give it 2 numbers (5 and 6)
 >>    t2 = t;
 >>    cout << t2; // this will print 5 6
-  
